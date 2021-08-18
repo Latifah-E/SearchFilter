@@ -18,12 +18,12 @@
     </div>
     <div id="root" class="container">
         <div class="box">
-          <input id="input" type="search" value="myanswers" v-model="search" placeholder="input question...">
+          <input id="input" v-on:keyup="isTrue" type="search" value="myanswers" v-model="search" placeholder="input question...">
           
         </div>
         <div class="box">
           <ul>
-            <li v-for="answer in filteredAnswers"> 
+            <li v-for="answer in filteredAnswers" v-bind:class="{'display':inPut}"> 
                 <h3>{{answer.title}}</h3>
                 <p>{{answer.content}}</p>
             </li> 

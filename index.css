@@ -17,13 +17,8 @@ body{
     height: 42px;
     font-size: 25px;
 }
-#input::after{
-    
-        border: none;
-        text-align: left;
-        width: 90%;
-        height: 42px;
-    
+.display{
+    display: none;
 }
 .box{
     margin-top: 30px;
