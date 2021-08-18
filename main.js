@@ -25,13 +25,13 @@ var app = new Vue({
 computed: {
     filteredAnswers: function(){
         var answerCounter = document.getElementById("input").value.length;
-        if (answerCounter < 1){
-            return this.filteredAnswers = null;
+        if (answerCounter <= 0){
+            return this.answers = null;
             
         }
         else{
             return this.answers.filter((answer)=> {
-                return answer.title.match(this.search);
+                return answer.title.match(this.search) || answer.content.match(this.search);
                 
             });
             
